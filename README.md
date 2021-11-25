@@ -32,9 +32,9 @@ Download package dependencies from [dependencies.rosinstall](install/dependencie
 ```
 cd ~/catkin_ws/src
 wstool init
-wstool set --git polygon_coverage_planning git@github.com:ethz-asl/polygon_coverage_planning.git
+wstool set --git polygon_coverage_planning https://github.com/ethz-asl/polygon_coverage_planning.git
 wstool update
-wstool merge polygon_coverage_planning/install/dependencies.rosinstall
+wstool merge polygon_coverage_planning/install/dependencies_https.rosinstall
 wstool update
 ```
 
@@ -46,7 +46,7 @@ cd polygon_coverage_planning/install
 
 Finally, build the workspace.
 ```
-catkin build
+catkin build polygon_coverage_benchmark polygon_coverage_msgs polygon_coverage_ros polygon_coverage_geometry polygon_coverage_planners polygon_coverage_solvers
 ```
 
 ## Getting Started
